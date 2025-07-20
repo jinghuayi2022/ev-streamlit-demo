@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 import math
 
 # ------------- CONFIG -------------
-API_URL    = "https://5aif3j5udk.execute-api.ap-southeast-2.amazonaws.com/predict"
+import os
+API_URL = os.environ.get("API_URL", "https://5aif3j5udk.execute-api.ap-southeast-2.amazonaws.com/predict")
 DATA_FILE  = "ev_test_canvas.csv"
 TIMEOUT_SEC = 10
 TITLE = "EV Ownership Probability (API Demo)"
